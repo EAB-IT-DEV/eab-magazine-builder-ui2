@@ -8,12 +8,13 @@ import MagazinePage from './components/MagazinePage/MagazinePage';
 export const AppContext = createContext();
 
 export const App = () => {
-    // const queryParams = new URLSearchParams(window.location.search);
+    const queryParams = new URLSearchParams(window.location.search);
     // console.log({ queryParams });
-    // const pKey = queryParams.get('key');
-    // let coreId = queryParams.get('coreId');
-    const pKey = 'jsun@eabcom';
-    let coreId = '1234567890';
+    const pKey = queryParams.get('key');
+    let coreId = queryParams.get('coreId');
+    console.log({ pKey, coreId });
+    // const pKey = 'jsun@eabcom';
+    // let coreId = '1234567890';
 
     if (coreId === null) {
         coreId = uuid4();
