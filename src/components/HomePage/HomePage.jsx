@@ -13,6 +13,7 @@ const HomePage = ({ pKey, coreId }) => {
         share: true,
         shouldReconnect: () => true,
     });
+    console.log('lastJsonMessage, sendJsonMessage, readyState', { lastJsonMessage, sendJsonMessage, readyState });
 
     // Run when the connection state (readyState) changes
     useEffect(() => {

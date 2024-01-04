@@ -7,10 +7,10 @@ export const App = () => {
     const queryParams = new URLSearchParams(window.location.search);
     console.log({ queryParams });
     const pKey = queryParams.get('key');
-    // let coreId = queryParams.get('coreId');
+    let coreId = queryParams.get('coreId');
 
-    // const pKey = 'jsun@eabcom';
-    let coreId = '1e5055f3-15ba-42cf-9856-f9651d39290d';
+    // const pKey = 'JWNK4B8SV4V';
+    // let coreId = '1234567890';
 
     if (coreId === null) {
         coreId = uuid4();
@@ -20,8 +20,7 @@ export const App = () => {
         window.location.replace(window.env.CVENT_EVENT_URL);
         return null; // prevent rendering the rest of the app.
     }
-    // 1e5055f3-15ba-42cf-9856-f9651d39290d
-    // 1e5055f3-15ba-42cf-9856-f9651d39290d
+
     console.log('PKey:', pKey, coreId);
     console.log('coreId:', pKey, coreId);
 
