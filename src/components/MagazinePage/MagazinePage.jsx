@@ -1,5 +1,5 @@
 import React, { useCallback, useContext, useState } from 'react';
-import { AppContext } from '../../App.js';
+import { AppContext } from '../HomePage/HomePage.jsx';
 import MagazineDetails from '../MagazineDetails/MagazineDetails.jsx';
 import './MagazinePage.css';
 
