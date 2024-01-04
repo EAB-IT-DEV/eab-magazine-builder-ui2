@@ -1,28 +1,32 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { v4 as uuid4 } from 'uuid';
 import './App.css';
 import HomePage from './components/HomePage/HomePage';
 
 export const App = () => {
     const queryParams = new URLSearchParams(window.location.search);
-    console.log({ queryParams });
+
     const pKey = queryParams.get('key');
-    let coreId = queryParams.get('coreId');
+    const initialCoreId = queryParams.get('coreId');
+    const [coreId, setCoreId] = useState(initialCoreId || '');
 
-    // const pKey = 'JWNK4B8SV4V';
-    // let coreId = '1234567890';
+    const initializedRef = useRef(false);
 
-    if (coreId === null) {
-        coreId = uuid4();
-    }
+    useEffect(() => {
+        if (pKey === null || (typeof pKey === 'string' && pKey.trim().length !== 11)) {
+            window.location.replace(window.env.CVENT_EVENT_URL);
+        }
+    }, [pKey]);
 
-    if (pKey === null || (typeof pKey === 'string' && pKey.trim().length !== 11)) {
-        window.location.replace(window.env.CVENT_EVENT_URL);
-        return null; // prevent rendering the rest of the app.
-    }
+    useEffect(() => {
+        if (!initializedRef.current && !initialCoreId) {
+            setCoreId(uuid4());
+            initializedRef.current = true;
+        }
+    }, [initialCoreId]);
 
-    console.log('PKey:', pKey, coreId);
-    console.log('coreId:', pKey, coreId);
+    console.log('PKey:', pKey);
+    console.log('coreId:', coreId);
 
     return (
         <div className="App">

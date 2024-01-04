@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "name": "debug-chrome",
+            "request": "launch",
+            "url": "http://localhost:3000?key=jsun@eabcom",
+            "webRoot": "${workspaceFolder}"
+
+            // https://d2e6liydoyebis.cloudfront.net?key=jsun@eabcom&coreid=1234567890
+        }
+    ]
+}
