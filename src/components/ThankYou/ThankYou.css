@@ -1,0 +1,20 @@
+.root {
+    background: #e1f1f1;
+}
+.main-container {
+    min-height: 100vh;
+}
+
+.heading-text {
+    font-size: 18px;
+    color: #003460;
+}
+.thank-you-text {
+    font-size: 31px;
+    color: #003460;
+}
+
+.image-details {
+    max-width: 300px;
+    max-height: 330px;
+}

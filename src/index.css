@@ -1,8 +1,44 @@
 html {
-  margin: 0;
+    margin: 0;
 }
 body {
-  min-height: 100vh;
-  background-color: white;
-  margin: 0 auto;
+    /* min-height: 100vh;
+    margin: 0 auto; */
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+}
+.check-icon {
+    font-size: 32px;
+    /* color: #003460; */
+    color: darkgray;
+    padding: 5px 0px;
+}
+.selected-check-icon {
+    font-size: 32px;
+    color: #003460;
+    padding: 5px 0px;
+}
+.check-icon:hover {
+    cursor: pointer;
+}
+.button-style {
+    background: #004aad;
+    border: none;
+    color: #fff;
+    padding: 8px 40px;
+    border-radius: 30px;
+}
+.next-btn-link {
+    text-decoration: none;
+    color: #fff;
+}
+.cover-image {
+    width: 140px;
+    height: 180px;
+}
+.cover-image:hover {
+    filter: grayscale(30%);
+    cursor: pointer;
 }

@@ -1,29 +1,35 @@
-import React from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { v4 as uuid4 } from "uuid";
-
 import "./App.css";
-import { Home } from "./components/home";
-import Header from "./components/header";
-import Footer from "./components/footer";
+import HomePage from "./components/HomePage/HomePage";
 
 export const App = () => {
-  const queryParams = new URLSearchParams(window.location.search);
-  const pKey = queryParams.get("key");
-  let coreId = queryParams.get("coreId");
-  if (coreId === null) {
-    coreId = uuid4();
-  }
+  const [loading, setLoading] = useState(true);
 
-  if (pKey === null || (typeof pKey === "string" && pKey.trim().length !== 11)) {
-    window.location.replace(window.env.CVENT_EVENT_URL);
-    return null; // prevent rendering the rest of the app.
-  }
+  const urlState = useMemo(() => {
+    const queryParams = new URLSearchParams(window.location.search);
+    const pKey = queryParams.get("key");
+    const coreId = queryParams.get("coreid") || uuid4();
+    console.log("Inside urlState: ", pKey, coreId);
+    return { pKey, coreId };
+  }, []);
+
+  useEffect(() => {
+    if (
+      urlState.pKey === null ||
+      (typeof urlState.pKey === "string" && urlState.pKey.trim().length !== 11)
+    ) {
+      window.location.replace(window.env.CVENT_EVENT_URL);
+      return;
+    }
+    setLoading(false);
+  }, [urlState]);
+
+  if (loading) return <div>Loading ...</div>;
 
   return (
     <div className="App">
-      <Header />
-      <Home pKey={pKey} coreId={coreId} />
-      <Footer />
+      <HomePage pKey={urlState.pKey} coreId={urlState.coreId} />
     </div>
   );
 };
