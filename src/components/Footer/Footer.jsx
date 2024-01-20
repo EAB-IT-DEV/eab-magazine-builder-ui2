@@ -1,5 +1,5 @@
 import React from 'react';
-import footerImg from '../../images/footer-placeholder–base.png';
+import footerImg from '../../images/footer-placeholder-base.png';
 
 const Footer = () => {
     return (

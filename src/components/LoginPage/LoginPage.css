@@ -1,0 +1,23 @@
+.login-heading-text {
+  font-size: 3rem;
+  color: #003460;
+}
+
+img.badge-image {
+  max-width: 300px;
+}
+
+.input-field {
+  max-width: 350px;
+  height: 50px;
+  border-radius: 25px;
+  border-color: #003460;
+  padding: 0 15px;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+}
+
+.error-text {
+  font-size: 0.8rem;
+  color: red;
+}

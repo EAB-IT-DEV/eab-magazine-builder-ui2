@@ -1,11 +1,30 @@
 .root {
-    background: #e1f1f1;
+  background: #e1f1f1;
 }
 .loading-container {
-    min-height: 100vh;
+  min-height: 100vh;
+}
+
+.magazine-page {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-view {
+  max-width: 1280px;
 }
 
 .heading-text {
-    font-size: 18px;
-    color: #003460;
+  font-size: 18px;
+  color: #003460;
 }
+
+.buttons-width button {
+  max-width: 300px;
+}
+
+/* @media (min-width: 768px) {
+  .buttons-width {
+    max-width: 100%;
+  }
+} */

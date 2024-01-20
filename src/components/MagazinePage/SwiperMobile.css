@@ -1,0 +1,25 @@
+.eab-carousel-indicators {
+  padding: 10px;
+  background-color: #2d5f90;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
+  max-width: 300px;
+}
+
+.eab-carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  content: '';
+  border: 0;
+  padding: 0;
+}
+
+.eab-carousel-indicators button.active {
+  background-color: yellow;
+}

@@ -1,20 +1,21 @@
 .root {
-    background: #e1f1f1;
+  background: #e1f1f1;
 }
 .main-container {
-    min-height: 100vh;
+  min-height: 100vh;
+  padding: 20px 0;
 }
 
 .heading-text {
-    font-size: 18px;
-    color: #003460;
+  font-size: 18px;
+  color: #003460;
 }
 .thank-you-text {
-    font-size: 31px;
-    color: #003460;
+  font-size: 31px;
+  color: #003460;
 }
 
 .image-details {
-    max-width: 300px;
-    max-height: 330px;
+  max-width: 300px;
+  max-height: 330px;
 }

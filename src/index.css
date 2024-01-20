@@ -1,44 +1,84 @@
 html {
-    margin: 0;
+  margin: 0;
 }
 body {
-    /* min-height: 100vh;
+  /* min-height: 100vh;
     margin: 0 auto; */
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
 }
 .check-icon {
-    font-size: 32px;
-    /* color: #003460; */
-    color: darkgray;
-    padding: 5px 0px;
+  font-size: 32px;
+  /* color: #003460; */
+  color: darkgray;
+  padding: 5px 0px;
 }
 .selected-check-icon {
-    font-size: 32px;
-    color: #003460;
-    padding: 5px 0px;
+  font-size: 32px;
+  color: #003460;
+  padding: 5px 0px;
 }
 .check-icon:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 .button-style {
-    background: #004aad;
-    border: none;
-    color: #fff;
-    padding: 8px 40px;
-    border-radius: 30px;
+  background: #004aad;
+  border: none;
+  color: #fff;
+  padding: 8px 40px;
+  border-radius: 30px;
 }
 .next-btn-link {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 .cover-image {
-    width: 140px;
-    height: 180px;
+  width: 300px;
+  height: 385px;
 }
 .cover-image:hover {
-    filter: grayscale(30%);
-    cursor: pointer;
+  filter: grayscale(30%);
+  cursor: pointer;
+}
+
+.published-shadow {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.loading-previews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 385px;
+}
+
+img.check-icon {
+  width: 48px;
+  height: 48px;
+}
+img.published-banner {
+  height: 48px;
+  position: absolute;
+  z-index: 1;
+  display: block;
+  margin-top: 48px;
+}
+.published-container {
+  height: 48px;
+}
+
+img.published-carousel {
+  position: absolute;
+  display: block;
+  height: 48px;
+  width: 300px;
+  margin-top: -380px;
+  margin-left: -65px;
+}
+
+.general-color {
+  color: #003460;
 }
